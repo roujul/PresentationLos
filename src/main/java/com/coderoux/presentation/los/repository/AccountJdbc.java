@@ -29,6 +29,7 @@ public class AccountJdbc {
         LOGGER.debug("Get password: " + user);
         String password = null;
         String query = String.format(SELECT_FROM_ACCOUNT, user);
+        LOGGER.debug("Query: " + query);
         Statement statement = dataSource.getConnection().createStatement();
         ResultSet resultSet = statement.executeQuery(query);
         while(resultSet.next()) {
