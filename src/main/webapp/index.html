@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Présentation LOS 2016</title>
+
+</head>
+
+<body>
+
+    <h3>Exemple 1: JDBC non sécurisé</h3>
+    <form name="loginForm" action="http://localhost:8080/api/example1" method="POST" target="example1">
+        Username: <input type="text" name="username" />
+        <input type="submit" value="Submit">
+    </form>
+    <iframe name="example1" id="example1" src="http://localhost:8080/notfound.html" width="100%" height="200"></iframe>
+    <br /><br />
+    Ex: o'; UPDATE account SET password = 'toto<br />
+    Ex: o'; UPDATE account SET username = 'hacker@gmail.com' where username = 'jroux@smartwavesa.com<br />
+    <br /><br /><hr /><br />
+
+    <h3>Exemple 2: JDBC sécurisé</h3>
+    <form name="loginForm" action="http://localhost:8080/api/example2" method="POST" target="example2">
+        Username: <input type="text" name="username" />
+        <input type="submit" value="Submit">
+    </form>
+    <iframe name="example2" id="example2" src="http://localhost:8080/notfound.html" width="100%" height="200"></iframe>
+
+    <br /><hr /><br />
+
+    <h3>Exemple 3: HQL non sécurisé</h3>
+    <form name="loginForm" action="http://localhost:8080/api/example3" method="POST" target="example3">
+        Username: <input type="text" name="username" />
+        <input type="submit" value="Submit">
+    </form>
+    <iframe name="example3" id="example3" src="http://localhost:8080/notfound.html" width="100%" height="200"></iframe>
+    <br /><br />
+    Ex: anything' OR 'x'='x<br />
+    Ex: jroux@smartwavesa.com'  AND password = 'julien<br />
+
+    <br /><hr /><br />
+
+    <h3>Exemple 4: HQL sécurisé</h3>
+    <form name="loginForm" action="http://localhost:8080/api/example4" method="POST" target="example4">
+        Username: <input type="text" name="username" />
+        <input type="submit" value="Submit">
+    </form>
+    <iframe name="example4" id="example4" src="http://localhost:8080/notfound.html" width="100%" height="200"></iframe>
+
+    <br /><hr /><br />
+
+    <h3>Exemple 5: Hash</h3>
+    <form name="loginForm" action="http://localhost:8080/api/example5" method="POST" target="example5">
+        Username: <input type="text" name="username" />
+        <input type="submit" value="Submit">
+    </form>
+    <iframe name="example5" id="example5" src="http://localhost:8080/notfound.html" width="100%" height="200"></iframe>
+
+    <br /><hr /><br />
+
+    <h3>Exemple 6: Bcrypt</h3>
+    <form name="loginForm" action="http://localhost:8080/api/example6" method="POST" target="example6">
+        Username: <input type="text" name="username" /><br />
+        Iterations: <input type="text" name="iterations" />
+        <input type="submit" value="Submit">
+    </form>
+    <iframe name="example6" id="example6" src="http://localhost:8080/notfound.html" width="100%" height="200"></iframe>
+    Ex: entre 4 et 31
+
+    <br /><hr /><br />
+
+    <h3>Exemple 7: Slow equals</h3>
+    <form name="loginForm" action="http://localhost:8080/api/example7" method="POST" target="example7">
+        Line 1: <input type="text" name="line1" /><br />
+        Line 2: <input type="text" name="line2" />
+        <input type="submit" value="Submit">
+    </form>
+    <iframe name="example7" id="example7" src="http://localhost:8080/notfound.html" width="100%" height="200"></iframe>
+
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+</body>
+</html>
